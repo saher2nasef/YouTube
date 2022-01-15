@@ -80,6 +80,10 @@ function RTL() {
         body.classList.add("DirBody")
     }
 }
+
+// Inner Videos
+let DivVideos = document.querySelector(".sectionOtherVideo")
+let sectionVideo = document.querySelector(".sectionVideo")
 window.onload = function() {
     let body = document.querySelector("body");
     if (localStorage.getItem("Dir")) {
@@ -89,12 +93,6 @@ window.onload = function() {
             body.classList.remove("DirBody")
         }
     }
-}
-
-// Inner Videos
-let DivVideos = document.querySelector(".sectionOtherVideo")
-let sectionVideo = document.querySelector(".sectionVideo")
-window.onload = function() {
     for (let i = 0; i < 10; i++) {
         DivVideos.innerHTML += `
         <div>
