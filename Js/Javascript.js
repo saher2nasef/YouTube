@@ -88,43 +88,6 @@
         var r = document.querySelector(':root');
         let Bool = 0;
 
-        function Toggle() {
-            if (Bool == 0) {
-                Bool = 1
-                r.style.setProperty('--ColorMain', '#515ac8');
-                r.style.setProperty('--BackGroundColor', '#FFF');
-                r.style.setProperty('--BackGroundColor2', '#EEE');
-                r.style.setProperty('--Color', '#000');
-                r.style.setProperty('--Search1', '#EEE');
-                r.style.setProperty('--Search2', '#000');
-            } else if (Bool == 1) {
-                Bool = 2
-                r.style.setProperty('--ColorMain', '#d83b3b');
-                r.style.setProperty('--BackGroundColor', '#3d3c38');
-                r.style.setProperty('--BackGroundColor2', '#312d2a');
-                r.style.setProperty('--Color', '#fff');
-                r.style.setProperty('--Search1', '#2a2325');
-                r.style.setProperty('--Search2', '#fff');
-            } else if (Bool == 2) {
-                Bool = 3
-                r.style.setProperty('--ColorMain', '#ef7847');
-                r.style.setProperty('--BackGroundColor', '#3d3c38');
-                r.style.setProperty('--BackGroundColor2', '#312d2a');
-                r.style.setProperty('--Color', '#fff');
-                r.style.setProperty('--Search1', '#2a2325');
-                r.style.setProperty('--Search2', '#fff');
-
-            } else if (Bool == 3) {
-                Bool = 0
-                r.style.setProperty('--ColorMain', '#00c3ff');
-                r.style.setProperty('--BackGroundColor', '#3d3c38');
-                r.style.setProperty('--BackGroundColor2', '#312d2a');
-                r.style.setProperty('--Color', '#fff');
-                r.style.setProperty('--Search1', '#2a2325');
-                r.style.setProperty('--Search2', '#fff');
-            }
-
-        }
 
         let body = document.querySelector("body");
         if (localStorage.getItem("Dir")) {
@@ -137,18 +100,57 @@
             body.classList.remove("DirBody")
         }
     }
-        function RTL() {
-            let body = document.querySelector("body");
-            if (localStorage.getItem("Dir") != null) {
-                if (localStorage.getItem("Dir") == "true") {
-                    body.classList.remove("DirBody")
-                    localStorage.setItem("Dir", false)
-                } else {
-                    localStorage.setItem("Dir", true)
-                    body.classList.add("DirBody")
-                }
+
+    function RTL() {
+        let body = document.querySelector("body");
+        if (localStorage.getItem("Dir") != null) {
+            if (localStorage.getItem("Dir") == "true") {
+                body.classList.remove("DirBody")
+                localStorage.setItem("Dir", false)
             } else {
                 localStorage.setItem("Dir", true)
                 body.classList.add("DirBody")
             }
+        } else {
+            localStorage.setItem("Dir", true)
+            body.classList.add("DirBody")
         }
+    }
+
+    function Toggle() {
+        if (Bool == 0) {
+            Bool = 1
+            r.style.setProperty('--ColorMain', '#515ac8');
+            r.style.setProperty('--BackGroundColor', '#FFF');
+            r.style.setProperty('--BackGroundColor2', '#EEE');
+            r.style.setProperty('--Color', '#000');
+            r.style.setProperty('--Search1', '#EEE');
+            r.style.setProperty('--Search2', '#000');
+        } else if (Bool == 1) {
+            Bool = 2
+            r.style.setProperty('--ColorMain', '#d83b3b');
+            r.style.setProperty('--BackGroundColor', '#3d3c38');
+            r.style.setProperty('--BackGroundColor2', '#312d2a');
+            r.style.setProperty('--Color', '#fff');
+            r.style.setProperty('--Search1', '#2a2325');
+            r.style.setProperty('--Search2', '#fff');
+        } else if (Bool == 2) {
+            Bool = 3
+            r.style.setProperty('--ColorMain', '#ef7847');
+            r.style.setProperty('--BackGroundColor', '#3d3c38');
+            r.style.setProperty('--BackGroundColor2', '#312d2a');
+            r.style.setProperty('--Color', '#fff');
+            r.style.setProperty('--Search1', '#2a2325');
+            r.style.setProperty('--Search2', '#fff');
+
+        } else if (Bool == 3) {
+            Bool = 0
+            r.style.setProperty('--ColorMain', '#00c3ff');
+            r.style.setProperty('--BackGroundColor', '#3d3c38');
+            r.style.setProperty('--BackGroundColor2', '#312d2a');
+            r.style.setProperty('--Color', '#fff');
+            r.style.setProperty('--Search1', '#2a2325');
+            r.style.setProperty('--Search2', '#fff');
+        }
+
+    }
