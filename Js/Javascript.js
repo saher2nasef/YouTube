@@ -126,6 +126,17 @@
 
         }
 
+        let body = document.querySelector("body");
+        if (localStorage.getItem("Dir")) {
+            if (localStorage.getItem("Dir") == "true") {
+                body.classList.add("DirBody")
+            } else {
+                body.classList.remove("DirBody")
+            }
+        } else {
+            body.classList.remove("DirBody")
+        }
+    }
         function RTL() {
             let body = document.querySelector("body");
             if (localStorage.getItem("Dir") != null) {
@@ -141,15 +152,3 @@
                 body.classList.add("DirBody")
             }
         }
-
-        let body = document.querySelector("body");
-        if (localStorage.getItem("Dir")) {
-            if (localStorage.getItem("Dir") == "true") {
-                body.classList.add("DirBody")
-            } else {
-                body.classList.remove("DirBody")
-            }
-        } else {
-            body.classList.remove("DirBody")
-        }
-    }
