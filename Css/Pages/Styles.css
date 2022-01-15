@@ -423,7 +423,7 @@
     width: 50%;
 }
 
-.ConTainer_YouTube .sectionOtherVideo>div span {
+.ConTainer_YouTube .sectionOtherVideo>div>span {
     background-color: var(--Search1);
     width: 50%;
     height: 93px;
