@@ -1,0 +1,126 @@
+.DirBody {
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+.DirBody .ConTainer header .Left>button.img>div {
+    right: -1000%;
+}
+
+.DirBody .ConTainer header .Left>button.img>div.active {
+    right: 10px;
+}
+
+.DirBody .ConTainer .ConTainer_YouTube .Options {
+    left: 0;
+    right: auto;
+}
+
+.DirBody .ConTainer header .Left {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.DirBody .ConTainer header .Center .BarSearch {
+    flex-direction: row;
+}
+
+.DirBody .ConTainer header .Center>button {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.DirBody .ConTainer header .Right {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.DirBody .ConTainer header .Right a {
+    right: auto;
+    left: -20px;
+}
+
+.DirBody .ConTainer_YouTube .sectionOtherVideo>div>div h6,
+.DirBody .ConTainer_YouTube .sectionOtherVideo>div>div a,
+.DirBody .ConTainer_YouTube .sectionOtherVideo>div>div h5 {
+    direction: ltr;
+    text-align: left;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo {
+    direction: ltr;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child div {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo2 .description {
+    direction: ltr;
+    margin: 20px 0px 20px 55px;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion {
+    direction: ltr;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion button span {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    direction: rtl;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Date span:first-child::after {
+    display: none;
+}
+
+.DirBody .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Date span:first-child::before {
+    content: '';
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--Color);
+    margin: 0 5px 0 9px;
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+
+.DirBody .ConTainer_YouTube .sectionOtherVideo>div>div {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.DirBody .ConTainer_YouTube .sectionOtherVideo {
+    padding: 10px 30px 0 10px;
+}
+
+@media (max-width:1050px) {
+    .DirBody .ConTainer_YouTube .sectionOtherVideo>div>div h6 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .DirBody .ConTainer_YouTube .sectionOtherVideo>div>div h6 span:first-child::after {
+        display: none;
+    }
+    .DirBody .ConTainer_YouTube .sectionOtherVideo>div>div h6 span:first-child::before {
+        content: '';
+        padding: 2px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: var(--Color);
+        margin: 0 5px 0 9px;
+        position: relative;
+        top: -3px;
+        left: -2px;
+    }
+}

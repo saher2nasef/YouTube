@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Kufi+Arabic:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+
+/* Nice Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--BackGroundColor);
+}
+
+
+/* Main Vaibales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+:root {
+    --BackGroundColor: #3d3c38;
+    --BackGroundColor2: #312d2a;
+    --Color: rgb(255, 255, 255);
+    --ColorMain: #00c3ff;
+    --Search1: rgb(36, 32, 32);
+    --Search2: #ffffff;
+}
+
+.ConTainer {
+    width: 100%;
+}
+
+
+/* Start Header */
+
+.ConTainer header {
+    width: 100%;
+    height: 58px;
+    background: var(--BackGroundColor);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000000;
+    border-bottom: 2px solid var(--BackGroundColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ConTainer header .Left {
+    width: 22%;
+    height: 100%;
+    background: var(--BackGroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.ConTainer header .Left>button.img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.ConTainer header .Left>button.img>div {
+    width: 290px;
+    background: var(--BackGroundColor2);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -1000%;
+    top: 44px;
+    z-index: 200;
+}
+
+.ConTainer header .Left>button.img>div.active {
+    left: 0;
+}
+
+.ConTainer header .Left>button.img>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    direction: rtl;
+    margin: 10px 0;
+}
+
+.ConTainer header .Left>button.img>div>div img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.ConTainer header .Left>button.img>div>div h6 {
+    font-size: 20px;
+}
+
+.ConTainer header .Left>button.img>div span {
+    background-color: var(--ColorMain);
+    color: var(--BackGroundColor);
+    padding: 8px;
+    width: 95%;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.ConTainer header .Left>button.img>div hr {
+    margin: 8px 0;
+}
+
+.ConTainer header .Left>button.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.ConTainer header .Left .search {
+    display: none;
+}
+
+.ConTainer header .Left>button,
+.ConTainer header>button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 0;
+    background: var(--Search1);
+    color: var(--Search2);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.ConTainer header .Center {
+    width: 60%;
+    height: 100%;
+    background-color: var(--BackGroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ConTainer header .Center .BarSearch {
+    width: 80%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.ConTainer header .Center .search {
+    transform: scale(0);
+}
+
+.ConTainer header .Center .BarSearch input {
+    width: calc(100% - 80px);
+    height: 100%;
+    padding: 0 10px;
+    transition: .3s;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--Search1);
+    color: var(--Search2);
+    opacity: .9;
+    outline: 0;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Numans', sans-serif;
+    font-weight: 500;
+}
+
+.ConTainer header .Center .BarSearch button {
+    width: 80px;
+    height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    background-color: var(--Search1);
+    color: var(--Search2);
+    border: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.ConTainer header .Center .BarSearch input:focus+button {
+    opacity: 1;
+}
+
+.ConTainer header .Center>button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 0;
+    background: var(--Search1);
+    color: var(--Search2);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* .ConTainer header .Right */
+
+.ConTainer header .Right {
+    width: 18%;
+    height: 100%;
+    background-color: var(--BackGroundColor);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+.ConTainer header .Right a {
+    width: 120px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    right: -25px;
+    top: -4px;
+}
+
+.ConTainer header .Right a svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--Color);
+}
+
+.ConTainer header .Right a svg .Icon {
+    width: 100%;
+    height: 100%;
+    fill: var(--ColorMain);
+}
+
+.ConTainer header .Right a svg .Icon+path {
+    fill: #fff;
+}
+
+.Right button {
+    width: 80px;
+    height: 100%;
+    background: var(--BackGroundColor);
+    color: var(--Color);
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* End Header */
+
+
+/* Start ConTainer_YouTube */
+
+.ConTainer_YouTube {
+    background-color: var(--BackGroundColor2);
+    width: 100%;
+    margin: 58px 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    color: var(--Color);
+    padding-bottom: 100px;
+}
+
+.ConTainer_YouTube .sectionVideo {
+    width: 66%;
+    height: 100%;
+    padding: 20px;
+}
+
+.ConTainer_YouTube .sectionVideo video,
+.ConTainer_YouTube .sectionVideo iframe,
+.ConTainer_YouTube .sectionVideo img {
+    width: 100%;
+    height: 450px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo {
+    width: 100%;
+    direction: rtl;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo h5 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Date span:first-child::after {
+    content: '';
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--Color);
+    margin: 0 5px 0 4px;
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion {
+    direction: rtl;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion button {
+    width: fit-content;
+    padding: 5px 8px;
+    border: 0;
+    background: transparent;
+    color: var(--Color);
+    display: inline-block;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion button span {
+    margin-right: 10px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion button:hover span {
+    color: var(--ColorMain);
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom .Opinion button i:hover {
+    color: var(--ColorMain);
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child img {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child div a {
+    text-decoration: none;
+    color: var(--Color);
+    font-family: 'Numans', sans-serif;
+    font-weight: 800;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle .Channle_Child div a:hover {
+    color: var(--ColorMain);
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle #Subscribe {
+    background: var(--ColorMain);
+    padding: 8px 25px;
+    border-radius: 2px;
+    border: 0;
+    color: var(--Color);
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .description {
+    margin: 20px 55px 20px 0;
+    font-size: 13px;
+    direction: rtl;
+}
+
+.ConTainer_YouTube .sectionVideo .VideoInfo2 .description button {
+    background-color: transparent;
+    color: var(--ColorMain);
+    border: 0;
+}
+
+
+/*  */
+
+.ConTainer_YouTube .sectionOtherVideo {
+    width: 34%;
+    padding: 10px 10px 0 30px;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 10px 0;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div img {
+    width: 50%;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div span {
+    background-color: var(--Search1);
+    width: 50%;
+    height: 93px;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div {
+    margin-right: 10px;
+    width: 50%;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div h5 {
+    font-size: 14px;
+    font-weight: 400;
+    direction: rtl;
+    margin: 0 0 5px 0;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div>span {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    display: block;
+    background: var(--Search1);
+    margin: 5px 0;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div>a.a {
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    display: block;
+    background: var(--Search1);
+    margin: 5px 0 0 auto;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div a {
+    direction: rtl;
+    text-align: right;
+    display: block;
+    text-decoration: none;
+    color: var(--ColorMain);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div h6 {
+    direction: rtl;
+    margin: 5px 0 0 0;
+    font-size: 11px;
+}
+
+.ConTainer_YouTube .sectionOtherVideo>div>div h6 span:first-child::after {
+    content: '';
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--Color);
+    margin: 0 5px 0 4px;
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+
+
+/* End ConTainer_YouTube */
+
+@media (max-width:1100px) {
+    .ConTainer header .Center {
+        width: 50%;
+    }
+    .ConTainer header .Left {
+        width: 30%;
+    }
+}
+
+@media (max-width:1050px) {
+    .ConTainer_YouTube {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .ConTainer_YouTube .sectionOtherVideo,
+    .ConTainer_YouTube .sectionVideo {
+        width: 100%;
+        height: auto !important;
+    }
+    .ConTainer_YouTube .sectionOtherVideo>div {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        margin: 10px 0;
+    }
+    .ConTainer_YouTube .sectionOtherVideo>div img {
+        width: 30%;
+    }
+}
+
+@media (max-width:950px) {
+    .ConTainer header .Center {
+        width: 40%;
+    }
+    .ConTainer header .Left {
+        width: 30%;
+    }
+    .ConTainer header .Right {
+        width: 30%;
+    }
+}
+
+@media (max-width:842px) {
+    .ConTainer header .Center {
+        width: 35%;
+    }
+    .ConTainer header .Left {
+        width: 35%;
+    }
+    .ConTainer header .Right {
+        width: 30%;
+    }
+}
+
+@media (max-width:650px) {
+    .ConTainer header {
+        justify-content: flex-start;
+    }
+    .ConTainer header .Center {
+        width: fit-content;
+    }
+    .ConTainer header .Center .BarSearch {
+        display: none;
+    }
+    .ConTainer header .Left {
+        width: 40%;
+    }
+    .ConTainer header .Right {
+        width: 45%;
+        margin-left: auto;
+        display: inline-flex;
+    }
+    .ConTainer header .Center .search {
+        transform: scale(1);
+    }
+    .ConTainer header .Left button,
+    .ConTainer header .Center button {
+        margin-right: 10px !important;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:600px) {
+    .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 28px;
+        flex-direction: column;
+    }
+    .ConTainer_YouTube .sectionVideo .VideoInfo .VideoBottom>div {
+        margin-bottom: 10px;
+    }
+    .ConTainer_YouTube .sectionVideo video,
+    .ConTainer_YouTube .sectionVideo iframe,
+    .ConTainer_YouTube .sectionVideo img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width:520px) {
+    .ConTainer header .Right {
+        width: 50%;
+        margin-left: auto;
+        display: inline-flex;
+    }
+    .ConTainer header .Left {
+        width: 50%;
+    }
+    .ConTainer header .Center {
+        display: none;
+    }
+    .ConTainer header .Left button,
+    .ConTainer header .Center button {
+        margin-right: 10px !important;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        background-color: transparent;
+    }
+    .th,
+    .video,
+    .microphone {
+        display: none;
+    }
+    .ConTainer header .Left .search {
+        display: block;
+    }
+    .ConTainer header .Center .search {
+        display: none;
+    }
+    .ConTainer_YouTube .sectionOtherVideo {
+        padding: 5px;
+    }
+    .ConTainer_YouTube .sectionOtherVideo>div {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .ConTainer_YouTube .sectionOtherVideo>div img {
+        width: 100%;
+    }
+    .ConTainer_YouTube .sectionOtherVideo>div div {
+        width: 100%;
+        padding: 10px;
+    }
+    .ConTainer_YouTube .sectionVideo video,
+    .ConTainer_YouTube .sectionVideo iframe,
+    .ConTainer_YouTube .sectionVideo img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width:450px) {
+    .ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .ConTainer_YouTube .sectionVideo .VideoInfo2 .Channle>div {
+        margin-bottom: 10px;
+    }
+    .ConTainer_YouTube .sectionVideo .VideoInfo2 .description {
+        margin: 10px 0;
+    }
+    .ConTainer_YouTube .sectionVideo video,
+    .ConTainer_YouTube .sectionVideo iframe,
+    .ConTainer_YouTube .sectionVideo img {
+        width: 100%;
+        height: 200px;
+    }
+}
